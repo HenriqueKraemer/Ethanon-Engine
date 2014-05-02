@@ -5,6 +5,5 @@ Ethanon Engine is a free and cross-platform 2D game development tool focused on 
 
 Website
 www.ethanonengine.com 
-
 Documentation
 www.doc.ethanonengine.com
