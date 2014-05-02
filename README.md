@@ -1,7 +1,12 @@
-Ethanon-Engine
+Ethanon Engine
 ==============
 
-A Ethanon Engine é uma ferramenta 2D de desenvolvimento grátis focada nas mais recentes placas de vídeo por aceleração de hardware e shaders. A engine suporta qualquer estilo de jogo, desde os clássicos RPGS isométricos [Chrono Trigger], Side-Scrollers [Mario e Sonic] e até mesmo Shoot’em Ups [Ikaruga e R-Type]. A proposta da engine é providenciar efeitos em alta-qualidade de luz, sombra e partículas com uma interface visual fácil de usar e um sistema de scripting simples e direto.
+Ethanon Engine is a free and cross-platform 2D game development tool focused on the recent video cards for hardware acceleration and shader effects. Any game style is allowed, from top-down view RPGs to side scrollers and shoot'em up games. The main goal is to provide high-quality lighting, shadow and particle effects with an easy to use visual interface, simple and direct scripting environment.
 
-Desenvolvedor: Andre Santee
-www.ethanonengine.com
+Entirely based on classical 2D sprites, Ethanon Engine uses pixel shaders to perform normal map based lighting and supports many sorts of map design (e.g.: isometric, orthogonal, hexagonal) since it relies on arbitrarily positioned entities instead of fixed tiles.
+
+Game flow is controlled by the AngelScript language, which brings familiar Java/C#/C++ syntax to gameplay scripts.
+
+The engine source-code is released under the MIT open source License.
+
+More: www.ethanonengine.com www.doc.ethanonengine.com
