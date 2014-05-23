@@ -2,12 +2,12 @@ public class EthanonActivity extends GS2DActivity {
     private RelativeLayout rl;
      
     AdRequest adRequest = new AdRequest.Builder()
-    .addTestDevice("AC98C820A50B4AD8A2106EDE96FB87D4") // ID do seu aparelho
+    .addTestDevice("AC98C820A50B4AD8A2106EDE96FB87D4") // Phone ID (u can get it on logcat)
     .build();
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        AdView adView = new AdView(this, AdSize.BANNER, "your_admob_key"); //Sua chave do AdMob
+        AdView adView = new AdView(this, AdSize.BANNER, "your_admob_key"); //AdMob key
         adView.loadAd(new AdRequest());
  
         rl = new RelativeLayout(this);
