@@ -6,7 +6,9 @@ public class EthanonActivity extends GS2DActivity {
         public void onCreate(Bundle savedInstanceState) {
                
                 AdRequest adRequest = new AdRequest();
-                adRequest.addTestDevice("Your android device");
+                adRequest.addTestDevice("Android Device ID"); // Available on logcat
+                
+                /* Its very important set your device as "test device" */
                
                 AdView adView = new AdView(this, AdSize.BANNER, "adMob key");
                 adView.loadAd(new AdRequest());
