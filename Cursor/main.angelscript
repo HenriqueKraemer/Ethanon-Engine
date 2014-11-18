@@ -1,4 +1,4 @@
-﻿﻿/*
+/*
 *
 *	Sample: ETH Cursor (hide/change the cursor image)
 * 		by Henrique Kraemer (www.henriquekraemer.com)
@@ -8,9 +8,6 @@
 
 ETHEntity@ mouse;
 ETHInput@ input = GetInputHandle();
-
-
-#include "eth_util.angelscript"
 
 void main()
 {
