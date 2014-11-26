@@ -1,0 +1,10 @@
+default
+{
+	title = ETH - Spaceship Controll by Henrique Kraemer (www.henriquekraemer.com);
+	richLighting = true;
+
+	width = 854;
+	height = 480;
+	windowed = true;
+	vsync = true;
+}
