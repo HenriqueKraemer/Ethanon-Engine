@@ -32,7 +32,7 @@ void ETHCallback_nave(ETHEntity@ thisEntity){
 
 	if(input.GetTouchState(0) == KS_HIT || input.GetKeyState(K_SPACE) == KS_HIT)
 	{
-		/* 			Shoot some bullets ;) 		*/
+		/* Shoot some bullets ;) */
 	}
 
 	/* Accelerometer Controll */
