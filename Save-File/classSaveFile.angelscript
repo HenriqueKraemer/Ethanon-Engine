@@ -43,15 +43,3 @@ final class GameSave {
                 return str;
         }
 }
- 
- 
-/*
- 
-(HowTo - Load)
-gamesave.saveOpen();
- 
-(HowTo - Save)
-game.high_score = score; // score is some local/global variable.
-game.saveWrite();
- 
-*/
