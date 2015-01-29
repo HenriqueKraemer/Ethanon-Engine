@@ -25,7 +25,8 @@ void loopScene(){
 	{
 		score = rand(1,100);
 		
-		if(score > game.high_score){
+		if(score > game.high_score) // Only saves the "score" if is greater than the score ("high_score") file.
+		{
 			game.high_score = score;
     			game.saveWrite();
     		}
