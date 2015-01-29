@@ -8,6 +8,9 @@
 
 #include "src/classSaveFile.angelscript"
 
+ETHInput@ input = GetInputHandle();
+int score = 0;
+
 void main()
 {
 	LoadScene("empty", "createScene", "loopScene");
@@ -18,9 +21,13 @@ void createScene(){
 }
 
 void loopScene(){
-	if( /* something */ )
+	if(input.GetKeyState(K_LMOUSE) == KS_HIT){
 	{
-		game.high_score = score;
-    		game.saveWrite();
+		score = rand(1,100);
+		
+		if(score > game.high_score){
+			game.high_score = score;
+    			game.saveWrite();
+    		}
 	}
 }
