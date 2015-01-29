@@ -20,7 +20,7 @@ void createScene(){
 void loopScene(){
 	if( /* something */ )
 	{
-	  game.high_score = score;
-    game.saveWrite();
+		game.high_score = score;
+    		game.saveWrite();
 	}
 }
