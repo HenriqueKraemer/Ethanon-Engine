@@ -62,10 +62,10 @@ void loopLoadScene(){
 		what is happening on screen. It is very useful to test the loading screen animation. */
 
 	LoadSprite(resourcesToLoad[resourceIterator++]);
-    if (resourceIterator == resourcesToLoad.length()){
-    	// When all bitmaps are loaded, call your game scene or menu scene.
-        LoadScene("", "createGameScene", "loopGameScene");
-    }
+    	if (resourceIterator == resourcesToLoad.length()){
+    		// When all bitmaps are loaded, call your game scene or menu scene.
+        	LoadScene("", "createGameScene", "loopGameScene");
+    	}
 }
 
 void ETHCallback_loading(ETHEntity@ thisEntity){
