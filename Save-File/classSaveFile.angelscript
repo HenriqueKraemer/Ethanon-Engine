@@ -1,45 +1,40 @@
-//Define variables
-const string dir        = GetGlobalExternalStorageDirectory();
-const string gameFile   = dir + "file.kraemer";
+final class GameSave 
+{
+  enmlFile save;
+  int high_score = -1;
  
-GameSave @gamesave = GameSave();
+  void saveOpen() {
+    string str = GetStringFromFile(gameFile);
+    str = encrypt(str);
  
-final class GameSave {
-        enmlFile save;
-        int high_score = -1;
+    if(str == ""){
+      print("File Not Found!");
+    }
+    else if (save.parseString(str) != 0){
+      print("Error save.loadConfig: " + save.getErrorString());
+    }
  
-        void saveOpen() {
-                string str = GetStringFromFile(gameFile);
-                str = encrypt(str);
+    if(gamesave.save.getInt("file" , "high_score" , high_score) == false)
+    {
+      gamesave.save.addValue("file" , "high_score", "" + 0) ;
+      high_score = 0;
+    }
  
-                if(str == ""){
-                        print("File Not Found!");
-                }
-                else if (save.parseString(str) != 0){
-                        print("Error save.loadConfig: " + save.getErrorString());
-                }
+    print("High Score(loaded) = " + high_score);
+  }
  
-                if(game.save.getInt("file" , "high_score" , high_score) == false)
-                {
-                        game.save.addValue("file" , "high_score", "" + 0) ;
-                        high_score = 0;
-                }
+  void saveWrite() const {
+    print("Saving Data...");
  
-                print("High Score(loaded) = " + high_score);
-        }
+    gamesave.save.addValue("file" , "high_score", "" + high_score) ;
  
-        void saveWrite() const {
-                print("Saving Data...");
+    string str = save.generateString();
+    str = encrypt(str);
+    SaveStringToFile(gameFile, str);
+  }
  
-                game.save.addValue("file" , "high_score", "" + high_score) ;
- 
-                string str = save.generateString();
-                str = encrypt(str);
-                SaveStringToFile(gameFile, str);
-        }
- 
-        string encrypt(string str) {
-                // Create your own algorithm ;)
-                return str;
-        }
+  string encrypt(string str) {
+    // Create your own algorithm ;)
+    return str;
+  }
 }

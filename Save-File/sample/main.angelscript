@@ -8,11 +8,16 @@
 
 #include "src/classSaveFile.angelscript"
 
+//Define variables
+const string dir        = GetGlobalExternalStorageDirectory();
+const string gameFile   = dir + "file.txt";
+ 
+GameSave @gamesave = GameSave();
+
 ETHInput@ input = GetInputHandle();
 int score = 0;
 
-void main()
-{
+void main(){
 	LoadScene("empty", "createScene", "loopScene");
 }
 
@@ -21,14 +26,14 @@ void createScene(){
 }
 
 void loopScene(){
-	if(input.GetKeyState(K_LMOUSE) == KS_HIT){
+	if(input.GetKeyState(K_LMOUSE) == KS_HIT)
 	{
 		score = rand(1,100);
 		
-		if(score > game.high_score) // Only saves the "score" if is greater than the score ("high_score") file.
+		if(score > gamesave.high_score) // Only saves if score is greater than the storaged score ("high_score").
 		{
-			game.high_score = score;
-    			game.saveWrite();
-    		}
+			gamesave.high_score = score;
+    		gamesave.saveWrite();
+    	}
 	}
 }
