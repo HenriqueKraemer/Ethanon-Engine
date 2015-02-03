@@ -7,12 +7,9 @@ final class GameSave
     string str = GetStringFromFile(gameFile);
     str = encrypt(str);
  
-    if(str == ""){
-      print("File Not Found!");
-    }
-    else if (save.parseString(str) != 0){
-      print("Error save.loadConfig: " + save.getErrorString());
-    }
+    if(str == "") print("File Not Found!");
+    
+    else if (save.parseString(str) != 0) print("Error save.loadConfig: " + save.getErrorString());
  
     if(gamesave.save.getInt("file" , "high_score" , high_score) == false)
     {
