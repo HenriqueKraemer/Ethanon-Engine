@@ -30,10 +30,10 @@ void loopScene(){
 	{
 		score = rand(1,100);
 		
-		if(score > gamesave.high_score) // Only saves if score is greater than the storaged score ("high_score").
+		if(score > gamesave.high_score) // Only saves if score is greater than the storaged score ("high_score")
 		{
 			gamesave.high_score = score;
-    		gamesave.saveWrite();
-    	}
+    			gamesave.saveWrite();
+    		}
 	}
 }
