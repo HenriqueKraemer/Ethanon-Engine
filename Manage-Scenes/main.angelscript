@@ -8,7 +8,7 @@
 *	NOTES:
 *	In this sample i show how to navigate between scenes in an organized way 
 *	and easy to understand. Obviously, this code should be adapted and increased 
-*	when working with a real project, because some functions do not meet certain requirements.
+*	when working with a real project.
 *
 */
 
