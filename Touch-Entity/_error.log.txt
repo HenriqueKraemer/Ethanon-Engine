@@ -1,0 +1,9 @@
+[C:\Users\Henrique\Github\Ethanon-Engine\Touch-Entity\_error.log.txt]
+
+[ERROR] main.angelscript, line 37: 'input' is not declared
+[ERROR] main.angelscript, line 37: Expression must be of boolean type
+
+[ERROR] main.angelscript, line 38: Illegal operation on 'int'
+[ERROR] main.angelscript, line 38: Expression must be of boolean type
+ERROR - Failed while building module.
+ERROR - ETHEngine::StartEngine: no scene has been loaded.
