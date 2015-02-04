@@ -28,7 +28,7 @@ public class EthanonActivity extends GS2DActivity {
         public void onStart(){
                 super.onStart();
                
-                /* Ignore the error below, it disappears after the build (WTF?) */
+                /* Ignore the error below, it disappears after the build */
                 this.addContentView(rl, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
  
                 insertCommandListener(new MyGameCommandListener(rl));
