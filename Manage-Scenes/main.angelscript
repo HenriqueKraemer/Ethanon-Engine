@@ -12,6 +12,8 @@
 *
 */
 
+#include "src/isPointInRect.angelscript"
+
 #include "src/scene-home.angelscript"
 #include "src/scene-info.angelscript"
 #include "src/scene-game.angelscript"
@@ -27,24 +29,8 @@ ETHInput@ input = GetInputHandle();
 
 void main()
 {
-	LoadScene("", "createLoading", "loopLoading");
-}
-
-void createLoading(){
-	/* Verify my loading scene sample
-		https://github.com/HenriqueKraemer/Ethanon-Engine/blob/master/Loading-Scene/ */
-}
-
-void loopLoading(){
-	/* Verify my loading scene sample
-		https://github.com/HenriqueKraemer/Ethanon-Engine/blob/master/Loading-Scene/ */
-
-
-	// if all resources are loaded...
-		scene_current = SCENE_HOME;
-		returnScene();
-	//
-
+	scene_current = SCENE_HOME;
+	returnScene();
 }
 
 void returnScene(){
@@ -68,7 +54,7 @@ void returnScene(){
 }
 
 void backButton(){
-	/* The BACKSPACE key on your keyboard will be interpreted as the back button on android */
+	/* Android interpretate K_BACK (Backspace) as the physical back button */
 
 	if (input.GetKeyState(K_BACK) == KS_HIT || input.GetKeyState(K_ESC) == KS_HIT)
 	{
@@ -77,5 +63,35 @@ void backButton(){
 			returnScene();
 		}
 		else Exit();
+	}
+}
+
+void ETHCallback_b_play(ETHEntity@ thisEntity) { callbackButtons(thisEntity); }
+void ETHCallback_b_exit(ETHEntity@ thisEntity) { callbackButtons(thisEntity); }
+void ETHCallback_b_credits(ETHEntity@ thisEntity) { callbackButtons(thisEntity); }
+void ETHCallback_b_back(ETHEntity@ thisEntity) { callbackButtons(thisEntity); }
+
+void callbackButtons(ETHEntity@ thisEntity)
+{
+	vector2 size = thisEntity.GetSize();
+
+	if(input.GetTouchState(0) == KS_HIT){
+		if(isPointInRect(input.GetTouchPos(0), thisEntity.GetPositionXY(), size, vector2(0.5f, 0.5f))){ 
+			if(thisEntity.GetEntityName() == "b_play.ent"){
+				scene_current = SCENE_GAME;
+				returnScene();
+			}
+			else if(thisEntity.GetEntityName() == "b_credits.ent"){
+				scene_current = SCENE_INFO;
+				returnScene();
+			}
+			else if(thisEntity.GetEntityName() == "b_exit.ent"){
+				Exit();
+			}
+			else if(thisEntity.GetEntityName() == "b_back.ent"){
+				scene_current = scene_previous;
+				returnScene();
+			}
+		}
 	}
 }
