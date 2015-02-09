@@ -9,7 +9,7 @@ final class GameSave
  
     if(str == "") print("File Not Found!");
     
-    else if (save.parseString(str) != 0) print("Error save.loadConfig: " + save.getErrorString());
+    else if (save.parseString(str) != 0) print("Error save.saveOpen: " + save.getErrorString());
  
     if(gamesave.save.getInt("file" , "high_score" , high_score) == false)
     {
