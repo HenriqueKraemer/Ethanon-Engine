@@ -1,3 +1,5 @@
+/* FILE: Ethanon\src\net\asantee\ethanon\EthanonActivity.java */
+
 public class EthanonActivity extends GS2DActivity {
 	/*...*/
 
