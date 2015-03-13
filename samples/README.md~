@@ -21,4 +21,4 @@ Save-File: class to save your game data.
 
 Spaceship-Controll: moving your spaceship with accelerometer.
 
-Touch-Entity: how make your entity touchable
+Touch-Entity
