@@ -1,8 +1,12 @@
-﻿/*
- Hello world!
+﻿﻿/*
+*
+* Sample: Loading Scene
+* by Henrique Kraemer 	(www.henriquekraemer.com)
+* 						(www.github.com/henriquekraemer)
+*
+*
 */
 
-#include "eth_util.angelscript"
 #include "ColorDecimalConversion.angelscript"
 
 void main()
